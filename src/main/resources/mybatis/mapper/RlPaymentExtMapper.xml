@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlPaymentExtMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlPaymentExt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PAY_ID" property="payId" jdbcType="VARCHAR" />
+    <result column="TURN_MARKET" property="turnMarket" jdbcType="VARCHAR" />
+    <result column="WHETHER_SHARE" property="whetherShare" jdbcType="VARCHAR" />
+    <result column="SMALL_TICKET_ACCESSORIES" property="smallTicketAccessories" jdbcType="VARCHAR" />
+    <result column="COUNTER_FEE" property="counterFee" jdbcType="DECIMAL" />
+    <result column="EXECUTIVE_CONFIRMATION" property="executiveConfirmation" jdbcType="VARCHAR" />
+    <result column="EXECUTION_CONFIRMATION_TIME" property="executionConfirmationTime" jdbcType="DATE" />
+    <result column="ACCT_ID" property="acctId" jdbcType="VARCHAR" />
+    <result column="SCONTRACT_AMOUNT" property="scontractAmount" jdbcType="DECIMAL" />
+    <result column="FINANCE_CHECK_STATUS" property="financeCheckStatus" jdbcType="VARCHAR" />
+    <result column="FINANCE_CHECK_RESULT" property="financeCheckResult" jdbcType="VARCHAR" />
+    <result column="SHOP_ID" property="shopId" jdbcType="VARCHAR" />
+    <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="ACCT_NAME" property="acctName" jdbcType="VARCHAR" />
+    <result column="ACCT_TYPE" property="acctType" jdbcType="VARCHAR" />
+    <result column="PAY_CODE" property="payCode" jdbcType="VARCHAR" />
+    <result column="MARKET_ID" property="marketId" jdbcType="VARCHAR" />
+    <result column="SHARE_SMALL_AMOUNT" property="shareSmallAmount" jdbcType="DECIMAL" />
+    <result column="MARKET_AMOUNT" property="marketAmount" jdbcType="DECIMAL" />
+    <result column="IS_PUNISH" property="isPunish" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="SYSTEM_SOURCE" property="systemSource" jdbcType="INTEGER" />
+    <result column="PAY_PATH" property="payPath" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

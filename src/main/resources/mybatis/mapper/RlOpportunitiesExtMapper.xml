@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlOpportunitiesExtMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlOpportunitiesExt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OPPORTUNITY_ID" property="opportunityId" jdbcType="VARCHAR" />
+    <result column="COLUMN_ID" property="columnId" jdbcType="VARCHAR" />
+    <result column="COLUMN_DESIGN" property="columnDesign" jdbcType="VARCHAR" />
+    <result column="ORDER_PRIORITY_CODE" property="orderPriorityCode" jdbcType="VARCHAR" />
+    <result column="LEAD_TYPE" property="leadType" jdbcType="VARCHAR" />
+    <result column="DRAW_MANAGER" property="drawManager" jdbcType="VARCHAR" />
+    <result column="PRODUCE_PLAN_TIME" property="producePlanTime" jdbcType="TIMESTAMP" />
+    <result column="COMUNICATION_TIMES" property="comunicationTimes" jdbcType="INTEGER" />
+    <result column="FIRST_PLANNER" property="firstPlanner" jdbcType="VARCHAR" />
+    <result column="DRIVER_LINE" property="driverLine" jdbcType="VARCHAR" />
+    <result column="LOGISTICS_PICKER" property="logisticsPicker" jdbcType="VARCHAR" />
+    <result column="LOGISTICS_PICK_TIME" property="logisticsPickTime" jdbcType="TIMESTAMP" />
+    <result column="CUSTOMER_ACCEPT_TIME" property="customerAcceptTime" jdbcType="TIMESTAMP" />
+    <result column="INSTALLTEAM_ID" property="installteamId" jdbcType="VARCHAR" />
+    <result column="INSTALLSMALLGROUP_ID" property="installsmallgroupId" jdbcType="VARCHAR" />
+    <result column="INSTALLER" property="installer" jdbcType="VARCHAR" />
+    <result column="PAYFOR_DATE" property="payforDate" jdbcType="TIMESTAMP" />
+    <result column="BACK_PERSON" property="backPerson" jdbcType="VARCHAR" />
+    <result column="PAYCAR_MONEY" property="paycarMoney" jdbcType="DECIMAL" />
+    <result column="OFFER_MONEY" property="offerMoney" jdbcType="DECIMAL" />
+    <result column="ORDERED_VALIDATE_TIME" property="orderedValidateTime" jdbcType="INTEGER" />
+    <result column="FIN_TIME_LIMIT" property="finTimeLimit" jdbcType="INTEGER" />
+    <result column="VALIDATE_PRERIOD_TIME" property="validatePreriodTime" jdbcType="INTEGER" />
+    <result column="IS_VERIFY_LIMIT" property="isVerifyLimit" jdbcType="VARCHAR" />
+    <result column="LESSTIME_STATUS" property="lesstimeStatus" jdbcType="VARCHAR" />
+    <result column="IS_SSLDD" property="isSsldd" jdbcType="VARCHAR" />
+    <result column="SM_LEADER" property="smLeader" jdbcType="VARCHAR" />
+    <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="PRE_PLAN_USER" property="prePlanUser" jdbcType="VARCHAR" />
+    <result column="AREA_ID" property="areaId" jdbcType="VARCHAR" />
+    <result column="SINGLE_TRIAL_TIME" property="singleTrialTime" jdbcType="TIMESTAMP" />
+    <result column="REFUND_AMOUNT" property="refundAmount" jdbcType="DECIMAL" />
+    <result column="SHADOW_AREA" property="shadowArea" jdbcType="DECIMAL" />
+    <result column="CHANGE_AMOUNT" property="changeAmount" jdbcType="INTEGER" />
+    <result column="CUSTOMER_MANAGER" property="customerManager" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_RECEIVER" property="customerReceiver" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_REFERRER" property="customerReferrer" jdbcType="VARCHAR" />
+    <result column="DECORATION_SITUATION" property="decorationSituation" jdbcType="VARCHAR" />
+    <result column="REGION" property="region" jdbcType="VARCHAR" />
+    <result column="SECOND_STATE" property="secondState" jdbcType="VARCHAR" />
+    <result column="SINGLE_DISCOUNT_RATE" property="singleDiscountRate" jdbcType="DECIMAL" />
+    <result column="SINGLE_DISCOUNT_AMOUT" property="singleDiscountAmout" jdbcType="DECIMAL" />
+    <result column="DECORATION_REMARKS" property="decorationRemarks" jdbcType="VARCHAR" />
+    <result column="VERIFYDATE" property="verifydate" jdbcType="TIMESTAMP" />
+    <result column="VERIFY_REAL_AMOUNT" property="verifyRealAmount" jdbcType="DECIMAL" />
+    <result column="VERIFYED" property="verifyed" jdbcType="TINYINT" />
+    <result column="IS_ASSIGNED" property="isAssigned" jdbcType="VARCHAR" />
+    <result column="IS_RE_MEASURE" property="isReMeasure" jdbcType="VARCHAR" />
+    <result column="REFUND_TYPE" property="refundType" jdbcType="VARCHAR" />
+    <result column="ELEVATOR" property="elevator" jdbcType="VARCHAR" />
+    <result column="CHANG_PAID_AMOUNT" property="changPaidAmount" jdbcType="DECIMAL" />
+    <result column="CHANG_FLAG" property="changFlag" jdbcType="INTEGER" />
+    <result column="PLAN_ID" property="planId" jdbcType="BIGINT" />
+    <result column="DECORATE_FLAG" property="decorateFlag" jdbcType="VARCHAR" />
+    <result column="GS_AREA" property="gsArea" jdbcType="DECIMAL" />
+    <result column="GM_AREA" property="gmArea" jdbcType="DECIMAL" />
+    <result column="TOTAL_SQUARE" property="totalSquare" jdbcType="DECIMAL" />
+    <result column="DISCOUNT_DESC" property="discountDesc" jdbcType="VARCHAR" />
+    <result column="BACKDRAW_DESC" property="backdrawDesc" jdbcType="VARCHAR" />
+    <result column="FIRST_SUBMIT_TIME" property="firstSubmitTime" jdbcType="TIMESTAMP" />
+    <result column="SUBMIT_COUNT" property="submitCount" jdbcType="INTEGER" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="VERIFY_CODE" property="verifyCode" jdbcType="VARCHAR" />
+    <result column="FINAL_ASSIGN_PERSON" property="finalAssignPerson" jdbcType="VARCHAR" />
+    <result column="TRIAL_RETURN_COUNT" property="trialReturnCount" jdbcType="INTEGER" />
+    <result column="TRIAL_STATE" property="trialState" jdbcType="VARCHAR" />
+    <result column="SHADOW_CHECK_STATE" property="shadowCheckState" jdbcType="VARCHAR" />
+    <result column="SHADOW_CHECK_PERSON" property="shadowCheckPerson" jdbcType="VARCHAR" />
+    <result column="SHADOW_CHECK_TIME" property="shadowCheckTime" jdbcType="TIMESTAMP" />
+    <result column="PROD_NUMBER" property="prodNumber" jdbcType="INTEGER" />
+    <result column="PROD_DRAW_NUMBER" property="prodDrawNumber" jdbcType="INTEGER" />
+    <result column="FILING_TIME" property="filingTime" jdbcType="TIMESTAMP" />
+    <result column="FILING_NUMBER" property="filingNumber" jdbcType="VARCHAR" />
+    <result column="EXTEND2" property="extend2" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

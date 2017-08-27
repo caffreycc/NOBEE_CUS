@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlPotentialOpportunitiesExtMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlPotentialOpportunitiesExt" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OPPORTUNITY_ID" property="opportunityId" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_MANAGER" property="customerManager" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_RECEIVER" property="customerReceiver" jdbcType="VARCHAR" />
+    <result column="ASSIGN_STATUS" property="assignStatus" jdbcType="VARCHAR" />
+    <result column="IS_HEADQUARTERS" property="isHeadquarters" jdbcType="VARCHAR" />
+    <result column="IS_ALLOT" property="isAllot" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="COLUMN_SALE" property="columnSale" jdbcType="VARCHAR" />
+    <result column="IS_VALID" property="isValid" jdbcType="VARCHAR" />
+    <result column="ASSIGN_DEPARTMENT" property="assignDepartment" jdbcType="VARCHAR" />
+    <result column="ASSIGN_TIME" property="assignTime" jdbcType="TIMESTAMP" />
+    <result column="RECEIVE_TIME" property="receiveTime" jdbcType="TIMESTAMP" />
+    <result column="BJ_LAST_TIME" property="bjLastTime" jdbcType="TIMESTAMP" />
+    <result column="CONTACT_COUNT" property="contactCount" jdbcType="INTEGER" />
+    <result column="NEXT_CONTACT_TIME" property="nextContactTime" jdbcType="TIMESTAMP" />
+    <result column="CONTACT_DETAIL" property="contactDetail" jdbcType="VARCHAR" />
+    <result column="BJ_LAST_OPERATOR" property="bjLastOperator" jdbcType="VARCHAR" />
+    <result column="ORDER_TYPE_NUM" property="orderTypeNum" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_REFERRER" property="customerReferrer" jdbcType="VARCHAR" />
+    <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="TOOL_ID" property="toolId" jdbcType="VARCHAR" />
+    <result column="AZ_REA_ID" property="azReaId" jdbcType="VARCHAR" />
+    <result column="ASSIGN_BY" property="assignBy" jdbcType="VARCHAR" />
+    <result column="CHANNEL_ID" property="channelId" jdbcType="VARCHAR" />
+    <result column="IS_INTRODUCE" property="isIntroduce" jdbcType="VARCHAR" />
+    <result column="COMMUNICATOR" property="communicator" jdbcType="VARCHAR" />
+    <result column="LAUNCH_EQUIPMENT" property="launchEquipment" jdbcType="VARCHAR" />
+    <result column="APPOINTMENT_NUMBER" property="appointmentNumber" jdbcType="VARCHAR" />
+    <result column="BRAND" property="brand" jdbcType="VARCHAR" />
+    <result column="INTRODUCE_DETAIL" property="introduceDetail" jdbcType="VARCHAR" />
+    <result column="COOPERATOR" property="cooperator" jdbcType="VARCHAR" />
+    <result column="DECORATION_STATUS" property="decorationStatus" jdbcType="VARCHAR" />
+    <result column="IS_MEASURE" property="isMeasure" jdbcType="VARCHAR" />
+    <result column="CHANNEL_STATUS" property="channelStatus" jdbcType="VARCHAR" />
+    <result column="ATTACHMENT_ID" property="attachmentId" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_THIRD" property="customerThird" jdbcType="VARCHAR" />
+    <result column="SEND_GIFT" property="sendGift" jdbcType="VARCHAR" />
+    <result column="GIFT" property="gift" jdbcType="VARCHAR" />
+    <result column="COMMISSIONER_APPROVE_STATUS" property="commissionerApproveStatus" jdbcType="VARCHAR" />
+    <result column="MANAGER_APPROVE_STATUS" property="managerApproveStatus" jdbcType="VARCHAR" />
+    <result column="WANT_COL_MTHD" property="wantColMthd" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

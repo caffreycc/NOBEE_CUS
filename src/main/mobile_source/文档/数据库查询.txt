@@ -1,0 +1,7 @@
+select t.* from `eos_dict_entry` t 
+where exists (select 1 from eos_dict_entry e 
+										where t.dictTypeId = e.dictTypeId 
+										and e.dictName like '%ÏÖ´ú¼òÔ¼%') 
+and t.`STATUS` = '1'
+order by dictTypeId,sortNo
+

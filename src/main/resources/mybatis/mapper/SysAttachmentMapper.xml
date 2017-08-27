@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.SysAttachmentMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.SysAttachment" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="FILE_ID" property="fileId" jdbcType="VARCHAR" />
+    <result column="FILE_NAME" property="fileName" jdbcType="VARCHAR" />
+    <result column="FILE_SOURCE" property="fileSource" jdbcType="VARCHAR" />
+    <result column="ABS_PATH" property="absPath" jdbcType="VARCHAR" />
+    <result column="FILE_TYPE" property="fileType" jdbcType="VARCHAR" />
+    <result column="FILE_SIZE" property="fileSize" jdbcType="DECIMAL" />
+    <result column="FILE_PATH" property="filePath" jdbcType="VARCHAR" />
+    <result column="GROUP_NO" property="groupNo" jdbcType="VARCHAR" />
+    <result column="GROUP_NAME" property="groupName" jdbcType="VARCHAR" />
+    <result column="RES_ID" property="resId" jdbcType="VARCHAR" />
+    <result column="CREATEBY" property="createby" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="RESOURCE_TYPE" property="resourceType" jdbcType="VARCHAR" />
+    <result column="RESOURCE_ID" property="resourceId" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

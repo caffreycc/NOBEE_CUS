@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlOpportunityCommentsMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlOpportunityComments" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="OPPORTUNITY_COMMENT_ID" property="opportunityCommentId" jdbcType="VARCHAR" />
+    <result column="OPPORTUNITY_ID" property="opportunityId" jdbcType="VARCHAR" />
+    <result column="CURRENT_STATUS" property="currentStatus" jdbcType="VARCHAR" />
+    <result column="COMMENT1" property="comment1" jdbcType="VARCHAR" />
+    <result column="COMMENT2" property="comment2" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+    <result column="CLIENT_UPDATE_DATE" property="clientUpdateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <select id="selectOrderStatusLog" resultType="Map" parameterType="String">
+    SELECT
+        o.CREATION_DATE orderTime,
+        o.CURRENT_STATUS orderStatu,
+        dict.SORTNO sortNo
+    FROM
+        rl_opportunity_comments o
+    LEFT JOIN eos_dict_entry dict ON o.CURRENT_STATUS=DICTID  AND dict.DICTTYPEID = 'ORDER_STATUS'
+    WHERE
+        o.OPPORTUNITY_ID = #{opportunityId}
+  </select>
+</mapper>

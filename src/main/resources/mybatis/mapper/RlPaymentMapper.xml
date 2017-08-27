@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlPaymentMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlPayment" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="PAY_ID" property="payId" jdbcType="VARCHAR" />
+    <result column="OPTY_ID" property="optyId" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="AMOUNT" property="amount" jdbcType="DECIMAL" />
+    <result column="RECEIVER" property="receiver" jdbcType="VARCHAR" />
+    <result column="PAY_WAY" property="payWay" jdbcType="VARCHAR" />
+    <result column="PAY_TIME" property="payTime" jdbcType="TIMESTAMP" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+    <result column="PAY_VOU_ID" property="payVouId" jdbcType="VARCHAR" />
+    <result column="PAY_VOU_NO" property="payVouNo" jdbcType="VARCHAR" />
+    <result column="HD_COUPON_NUMBER" property="hdCouponNumber" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlPotentialRequirementsMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlPotentialRequirements" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="REQUIREMENT_ID" property="requirementId" jdbcType="VARCHAR" />
+    <result column="OPPORTUNITY_ID" property="opportunityId" jdbcType="VARCHAR" />
+    <result column="REQUIREMENT_TYPE" property="requirementType" jdbcType="VARCHAR" />
+    <result column="REQUIREMENT_FUNCTION" property="requirementFunction" jdbcType="VARCHAR" />
+    <result column="REQUIREMENT_DESCRIPTION" property="requirementDescription" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+    <result column="UPDATE_FLAG" property="updateFlag" jdbcType="VARCHAR" />
+    <result column="CLIENT_UPDATE_DATE" property="clientUpdateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="BaseResultMapTool" type="Map" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="REQUIREMENT_ID" property="requirementId" jdbcType="VARCHAR" />
+    <result column="OPPORTUNITY_ID" property="opportunityId" jdbcType="VARCHAR" />
+    <result column="REQUIREMENT_TYPE" property="requirementType" jdbcType="VARCHAR" />
+    <result column="REQUIREMENT_FUNCTION" property="requirementFunction" jdbcType="VARCHAR" />
+    <result column="REQUIREMENT_DESCRIPTION" property="requirementDescription" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+    <result column="UPDATE_FLAG" property="updateFlag" jdbcType="VARCHAR" />
+    <result column="CLIENT_UPDATE_DATE" property="clientUpdateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <select id="selectRequire" resultMap="BaseResultMapTool" parameterType="String">
+      SELECT r.REQUIREMENT_ID,
+      r.REQUIREMENT_TYPE,
+      r.REQUIREMENT_FUNCTION,
+      r.REQUIREMENT_DESCRIPTION
+      FROM
+      rl_potential_requirements r
+      WHERE
+      r.OPPORTUNITY_ID =#{opportunityId}
+      ORDER BY r.CREATION_DATE
+  </select>
+</mapper>

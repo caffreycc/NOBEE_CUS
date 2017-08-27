@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.EosDictEntryMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.EosDictEntry" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="DICTTYPEID" property="dicttypeid" jdbcType="VARCHAR" />
+    <id column="DICTID" property="dictid" jdbcType="VARCHAR" />
+    <result column="DICTNAME" property="dictname" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="INTEGER" />
+    <result column="SORTNO" property="sortno" jdbcType="INTEGER" />
+    <result column="RANK" property="rank" jdbcType="INTEGER" />
+    <result column="PARENTID" property="parentid" jdbcType="VARCHAR" />
+    <result column="SEQNO" property="seqno" jdbcType="VARCHAR" />
+    <result column="FILTER1" property="filter1" jdbcType="VARCHAR" />
+    <result column="FILTER2" property="filter2" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="DictInfoVOMap" type="com.ricelink.weixin.vo.DictInfoVO">
+    <result column="id" jdbcType="VARCHAR" property="id"/>
+    <result column="text" jdbcType="VARCHAR" property="text"/>
+    <result column="father" jdbcType="VARCHAR" property="father"/>
+  </resultMap>
+  <select id="selectDictInfo" resultMap="DictInfoVOMap" parameterType="String">
+    SELECT DICTID id,
+            DICTNAME text,
+            PARENTID father
+            FROM eos_dict_entry
+            WHERE DICTTYPEID=#{dictTypeId}
+            ORDER BY sortNo
+  </select>
+  <select id="selectDictInfoFilter1" resultMap="DictInfoVOMap" parameterType="String">
+    SELECT DICTID id,
+    FILTER1 text,
+    PARENTID father
+    FROM eos_dict_entry
+    WHERE DICTTYPEID=#{dictTypeId}
+    ORDER BY sortNo
+  </select>
+  <select id="selectCity" resultMap="DictInfoVOMap">
+    SELECT
+        r.region_code id,
+        r.region_name text,
+        r.parent_code father
+    FROM
+        rl_region_info r
+    WHERE
+        r.region_level =3
+  </select>
+  <select id="selectCountry" resultType="Map">
+    SELECT
+        r.region_code id,
+        r.region_name text,
+        r.parent_code father,
+         '1' type
+    FROM
+        rl_region_info r
+    WHERE
+        r.region_level=4
+  </select>
+
+  <select id="selectAddress" resultMap="DictInfoVOMap">
+    SELECT
+        c.CELL_ID id,
+        c.CELL_NAME text,
+        c.PARENT_ID father
+    FROM
+        t_portal_bu_cell_info c
+  </select>
+</mapper>

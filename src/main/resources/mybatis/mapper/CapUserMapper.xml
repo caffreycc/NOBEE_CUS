@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.CapUserMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.CapUser" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="OPERATOR_ID" property="operatorId" jdbcType="VARCHAR" />
+    <result column="TENANT_ID" property="tenantId" jdbcType="VARCHAR" />
+    <result column="USER_ID" property="userId" jdbcType="VARCHAR" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="INVALDATE" property="invaldate" jdbcType="DATE" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="REAL_NAME" property="realName" jdbcType="VARCHAR" />
+    <result column="AUTHMODE" property="authmode" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="UNLOCKTIME" property="unlocktime" jdbcType="TIMESTAMP" />
+    <result column="MENUTYPE" property="menutype" jdbcType="VARCHAR" />
+    <result column="LASTLOGIN" property="lastlogin" jdbcType="TIMESTAMP" />
+    <result column="ERRCOUNT" property="errcount" jdbcType="DECIMAL" />
+    <result column="STARTDATE" property="startdate" jdbcType="DATE" />
+    <result column="ENDDATE" property="enddate" jdbcType="DATE" />
+    <result column="VALIDTIME" property="validtime" jdbcType="VARCHAR" />
+    <result column="MACCODE" property="maccode" jdbcType="VARCHAR" />
+    <result column="IPADDRESS" property="ipaddress" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="CREATEUSER" property="createuser" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="USER_TYPE" property="userType" jdbcType="VARCHAR" />
+    <result column="APPROVE_DRAW_FLAG" property="approveDrawFlag" jdbcType="VARCHAR" />
+    <result column="WX_OPENID" property="wxOpenid" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

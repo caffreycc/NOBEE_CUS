@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlOrderEvaluationMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlOrderEvaluation" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="EVA_ID" property="evaId" jdbcType="VARCHAR" />
+    <result column="OPTY_ID" property="optyId" jdbcType="VARCHAR" />
+    <result column="EVA_OBJECT" property="evaObject" jdbcType="VARCHAR" />
+    <result column="EVA_GRADE" property="evaGrade" jdbcType="VARCHAR" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+    <result column="EVA_DESCRIPTION" property="evaDescription" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

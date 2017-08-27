@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>附近门店</title>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=UzvSKqGAWmZvLNZ3GIbpqSsjklcA3Ha8"></script>
+
+    <style type="text/css">
+        body, html, #allmap {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        #l-map {
+            height: 500px;
+            width: 100%;
+        }
+
+        #r-result {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="l-map"></div>
+<div>
+    <ul>
+        <li>北京索菲亚（样板单专用门店</li>
+        <li>北京十里河体验馆店</li>
+        <li>北京房山店</li>
+        <li>北京通州万达店</li>
+    </ul>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("l-map",{minZoom:1,maxZoom:28});
+    var marker2
+
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function (r) {
+        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            map.centerAndZoom(r.point, 12);
+            var myIcon = new BMap.Icon("http://lbsyun.baidu.com/jsdemo/img/fox.gif", new BMap.Size(300, 157));
+            marker2 = new BMap.Marker(r.point, {icon: myIcon});  // 创建标注
+            map.addOverlay(marker2);
+            marker2.enableDragging();
+            map.centerAndZoom(r.point, 12);
+            marker2.addEventListener("dragend", function (e) {
+                alert(e.point.lat)
+                alert(e.point.lng)
+            })
+        }
+        else {
+            alert('failed' + this.getStatus());
+        }
+    }, {enableHighAccuracy: true});
+
+
+
+    var geolocationControl = new BMap.GeolocationControl();
+    geolocationControl.addEventListener("locationSuccess", function(e){
+        // 定位成功事件
+        var address = '';
+        address += e.addressComponent.province;
+        address += e.addressComponent.city;
+        address += e.addressComponent.district;
+        address += e.addressComponent.street;
+        address += e.addressComponent.streetNumber;
+        map.panTo(e.point);
+        map.centerAndZoom(e.point, 12);
+        alert("当前定位地址为：" + address);
+    });
+    geolocationControl.addEventListener("locationError",function(e){
+        // 定位失败事件
+        alert(e.message);
+    });
+//    map.addControl(geolocationControl);
+    // 定义一个控件类,即function
+    function ZoomControl(){
+        // 默认停靠位置和偏移量
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(10, 10);
+    }
+
+    // 通过JavaScript的prototype属性继承于BMap.Control
+    ZoomControl.prototype = new BMap.Control();
+
+    // 自定义控件必须实现自己的initialize方法,并且将控件的DOM元素返回
+    // 在本方法中创建个div元素作为控件的容器,并将其添加到地图容器中
+    ZoomControl.prototype.initialize = function(map){
+        // 创建一个DOM元素
+        var div = document.createElement("div");
+        // 添加文字说明
+        div.appendChild(document.createTextNode("重新定位"));
+        // 设置样式
+        div.style.cursor = "pointer";
+        div.style.border = "1px solid gray";
+        div.style.backgroundColor = "white";
+        // 绑定事件,点击一次放大两级
+        div.onclick = function(e){
+            geolocationControl.location();
+        }
+        // 添加DOM元素到地图中
+        map.getContainer().appendChild(div);
+        // 将DOM元素返回
+        return div;
+    }
+    // 创建控件
+    var myZoomCtrl = new ZoomControl();
+    // 添加到地图当中
+    map.addControl(myZoomCtrl);
+
+</script>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlDealerOrgMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlDealerOrg" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="ORG_NAME" property="orgName" jdbcType="VARCHAR" />
+    <result column="ORG_NUM" property="orgNum" jdbcType="VARCHAR" />
+    <result column="ORG_TYPE" property="orgType" jdbcType="VARCHAR" />
+    <result column="PAR_ORG_ID" property="parOrgId" jdbcType="VARCHAR" />
+    <result column="ORG_SEQ" property="orgSeq" jdbcType="VARCHAR" />
+    <result column="ORG_STATUS" property="orgStatus" jdbcType="VARCHAR" />
+    <result column="CLASS_TYPE" property="classType" jdbcType="VARCHAR" />
+    <result column="DEALER_AREA_TYPE" property="dealerAreaType" jdbcType="VARCHAR" />
+    <result column="OTHER_ORG_NAME" property="otherOrgName" jdbcType="VARCHAR" />
+    <result column="ORDER_MODEL" property="orderModel" jdbcType="VARCHAR" />
+    <result column="PROVINCE_ID" property="provinceId" jdbcType="VARCHAR" />
+    <result column="CITY_ID" property="cityId" jdbcType="VARCHAR" />
+    <result column="COUNTY_ID" property="countyId" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="WORK_PHONE" property="workPhone" jdbcType="VARCHAR" />
+    <result column="CELL_PHONE" property="cellPhone" jdbcType="VARCHAR" />
+    <result column="CREDIT_LEVEL" property="creditLevel" jdbcType="VARCHAR" />
+    <result column="ORG_LEVEL" property="orgLevel" jdbcType="DECIMAL" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="CIRCLE_NAME" property="circleName" jdbcType="VARCHAR" />
+    <result column="MALL_NAME" property="mallName" jdbcType="VARCHAR" />
+    <result column="OU_ID" property="ouId" jdbcType="VARCHAR" />
+    <result column="PY_SHOP" property="pyShop" jdbcType="VARCHAR" />
+    <result column="ADVICE_OU" property="adviceOu" jdbcType="VARCHAR" />
+    <result column="ACCOUNT_TYPE" property="accountType" jdbcType="VARCHAR" />
+    <result column="BUSINESSPURPOSE" property="businesspurpose" jdbcType="VARCHAR" />
+    <result column="MAINPURPOSE" property="mainpurpose" jdbcType="VARCHAR" />
+    <result column="SALE_TEAM" property="saleTeam" jdbcType="VARCHAR" />
+    <result column="SALE_MANAGER" property="saleManager" jdbcType="VARCHAR" />
+    <result column="RETAIL_STORE" property="retailStore" jdbcType="VARCHAR" />
+    <result column="SHOP_TYPE" property="shopType" jdbcType="VARCHAR" />
+    <result column="IS_TEMPLET" property="isTemplet" jdbcType="VARCHAR" />
+    <result column="SHOP_AREA" property="shopArea" jdbcType="VARCHAR" />
+    <result column="ORDER_NUM_RULE" property="orderNumRule" jdbcType="VARCHAR" />
+    <result column="STORE_LATITUDE" property="storeLatitude" jdbcType="VARCHAR" />
+    <result column="STORE_LONGITUDE" property="storeLongitude" jdbcType="VARCHAR" />
+    <result column="INAREA_ID" property="inareaId" jdbcType="VARCHAR" />
+    <result column="SHIPMENTTYPE" property="shipmenttype" jdbcType="VARCHAR" />
+    <result column="SHOP_FLAG" property="shopFlag" jdbcType="VARCHAR" />
+    <result column="DEALER_ORDER_FLAG" property="dealerOrderFlag" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="VARCHAR" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+    <result column="UPDATE_FLAG" property="updateFlag" jdbcType="VARCHAR" />
+    <result column="CLIENT_UPDATE_DATE" property="clientUpdateDate" jdbcType="DATE" />
+    <result column="DEFAULT_GUIDE" property="defaultGuide" jdbcType="VARCHAR" />
+    <result column="STORE_INTRODUCTION" property="storeIntroduction" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <resultMap id="BaseResultMapTool" type="Map" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="ORG_NAME" property="orgName" jdbcType="VARCHAR" />
+    <result column="ORG_NUM" property="orgNum" jdbcType="VARCHAR" />
+    <result column="ORG_TYPE" property="orgType" jdbcType="VARCHAR" />
+    <result column="PAR_ORG_ID" property="parOrgId" jdbcType="VARCHAR" />
+    <result column="ORG_SEQ" property="orgSeq" jdbcType="VARCHAR" />
+    <result column="ORG_STATUS" property="orgStatus" jdbcType="VARCHAR" />
+    <result column="CLASS_TYPE" property="classType" jdbcType="VARCHAR" />
+    <result column="DEALER_AREA_TYPE" property="dealerAreaType" jdbcType="VARCHAR" />
+    <result column="OTHER_ORG_NAME" property="otherOrgName" jdbcType="VARCHAR" />
+    <result column="ORDER_MODEL" property="orderModel" jdbcType="VARCHAR" />
+    <result column="PROVINCE_ID" property="provinceId" jdbcType="VARCHAR" />
+    <result column="CITY_ID" property="cityId" jdbcType="VARCHAR" />
+    <result column="COUNTY_ID" property="countyId" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="WORK_PHONE" property="workPhone" jdbcType="VARCHAR" />
+    <result column="CELL_PHONE" property="cellPhone" jdbcType="VARCHAR" />
+    <result column="CREDIT_LEVEL" property="creditLevel" jdbcType="VARCHAR" />
+    <result column="ORG_LEVEL" property="orgLevel" jdbcType="DECIMAL" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="START_DATE" property="startDate" jdbcType="DATE" />
+    <result column="END_DATE" property="endDate" jdbcType="DATE" />
+    <result column="CIRCLE_NAME" property="circleName" jdbcType="VARCHAR" />
+    <result column="MALL_NAME" property="mallName" jdbcType="VARCHAR" />
+    <result column="OU_ID" property="ouId" jdbcType="VARCHAR" />
+    <result column="PY_SHOP" property="pyShop" jdbcType="VARCHAR" />
+    <result column="ADVICE_OU" property="adviceOu" jdbcType="VARCHAR" />
+    <result column="ACCOUNT_TYPE" property="accountType" jdbcType="VARCHAR" />
+    <result column="BUSINESSPURPOSE" property="businesspurpose" jdbcType="VARCHAR" />
+    <result column="MAINPURPOSE" property="mainpurpose" jdbcType="VARCHAR" />
+    <result column="SALE_TEAM" property="saleTeam" jdbcType="VARCHAR" />
+    <result column="SALE_MANAGER" property="saleManager" jdbcType="VARCHAR" />
+    <result column="RETAIL_STORE" property="retailStore" jdbcType="VARCHAR" />
+    <result column="SHOP_TYPE" property="shopType" jdbcType="VARCHAR" />
+    <result column="IS_TEMPLET" property="isTemplet" jdbcType="VARCHAR" />
+    <result column="SHOP_AREA" property="shopArea" jdbcType="VARCHAR" />
+    <result column="ORDER_NUM_RULE" property="orderNumRule" jdbcType="VARCHAR" />
+    <result column="STORE_LATITUDE" property="storeLatitude" jdbcType="VARCHAR" />
+    <result column="STORE_LONGITUDE" property="storeLongitude" jdbcType="VARCHAR" />
+    <result column="INAREA_ID" property="inareaId" jdbcType="VARCHAR" />
+    <result column="SHIPMENTTYPE" property="shipmenttype" jdbcType="VARCHAR" />
+    <result column="SHOP_FLAG" property="shopFlag" jdbcType="VARCHAR" />
+    <result column="DEALER_ORDER_FLAG" property="dealerOrderFlag" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="VARCHAR" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+    <result column="UPDATE_FLAG" property="updateFlag" jdbcType="VARCHAR" />
+    <result column="CLIENT_UPDATE_DATE" property="clientUpdateDate" jdbcType="DATE" />
+    <result column="DEFAULT_GUIDE" property="defaultGuide" jdbcType="VARCHAR" />
+    <result column="STORE_INTRODUCTION" property="storeIntroduction" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <select id="selectRlDealerOrg" resultMap="BaseResultMapTool" parameterType="String">
+        <![CDATA[
+    SELECT
+        d.ORG_ID,
+        d.ORG_NAME,
+        d.ADDRESS,
+        d.CELL_PHONE
+    FROM
+        rl_dealer_org d
+    WHERE
+        d.ORG_ID = #{orgId}
+    UNION ALL
+        SELECT
+            d.ORG_ID,
+            d.ORG_NAME,
+            d.ADDRESS,
+            d.CELL_PHONE
+        FROM
+            rl_dealer_org d
+        WHERE
+            d.ORG_ID IN (
+                SELECT DISTINCT
+                    ORG_ID
+                FROM
+                    rl_potential_opportunities o
+                WHERE
+                    o.CUSTOMER_ID = #{customerId}
+                AND d.ORG_ID <>
+                    #{orgId}
+
+            )
+    ]]>
+  </select>
+  <select id="selectRlDealerOrgNoOrgId" resultType="Map" parameterType="String">
+    SELECT
+        d.ORG_ID,
+        d.ORG_NAME,
+        d.ADDRESS,
+        d.CELL_PHONE
+    FROM
+        rl_dealer_org d
+    WHERE
+        d.ORG_ID IN (
+            SELECT DISTINCT
+                ORG_ID
+            FROM
+                rl_potential_opportunities o
+            WHERE
+                o.CUSTOMER_ID = #{customerId}
+        )
+
+  </select>
+  <select id="selectOrgIntroduce" resultType="String" parameterType="String">
+      SELECT
+          d.STORE_INTRODUCTION
+      FROM
+          rl_dealer_org d
+      WHERE
+          d.ORG_ID = #{orgId}
+  </select>
+  <select id="selectNearbyOrg" resultMap="BaseResultMapTool" parameterType="String">
+      SELECT
+        d.ORG_ID,
+        d.ORG_NAME,
+        d.ADDRESS,
+        d.CELL_PHONE,
+        d.STORE_LATITUDE,
+        d.STORE_LONGITUDE
+    FROM
+        rl_dealer_org d
+  </select>
+  <select id="selectStoreDetails" resultMap="BaseResultMapTool" parameterType="String">
+    SELECT
+        d.ORG_ID,
+        d.ORG_NAME,
+        d.ADDRESS,
+        d.CELL_PHONE
+    FROM
+        rl_dealer_org d
+    WHERE d.ORG_ID=#{orgId}
+  </select>
+  <select id="selectOrgGuiDeaById" resultType="Map" parameterType="String">
+   SELECT
+        d.ORG_ID orgId,
+        d.DEFAULT_GUIDE guideId,
+        d2.ORG_ID dealer
+    FROM
+        rl_dealer_org d
+    LEFT JOIN rl_dealer_org d2 ON d.PAR_ORG_ID = d2.ORG_ID
+    WHERE
+        d.ORG_ID = #{orgId}
+  </select>
+</mapper>

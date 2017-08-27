@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlPotentialOpportunitiesMapper">
+    <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlPotentialOpportunities">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="OPPORTUNITY_ID" jdbcType="VARCHAR" property="opportunityId" />
+        <result column="CUSTOMER_ID" property="customerId" jdbcType="VARCHAR" />
+        <result column="GUIDE_ID" property="guideId" jdbcType="VARCHAR" />
+        <result column="DESIGNER_ID" property="designerId" jdbcType="VARCHAR" />
+        <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+        <result column="PHONE2" property="phone2" jdbcType="VARCHAR" />
+        <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+        <result column="CONNECT_NAME" property="connectName" jdbcType="VARCHAR" />
+        <result column="CONNECT_SEX" property="connectSex" jdbcType="CHAR" />
+        <result column="CONNECT_COMMENT" property="connectComment" jdbcType="VARCHAR" />
+        <result column="CONNECT_PHONE" property="connectPhone" jdbcType="VARCHAR" />
+        <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+        <result column="ADDRESS_CITY" property="addressCity" jdbcType="VARCHAR" />
+        <result column="ADDRESS_COUNTY" property="addressCounty" jdbcType="VARCHAR" />
+        <result column="ADDRESS_DETAIL" property="addressDetail" jdbcType="VARCHAR" />
+        <result column="ADDRESS_CELL" property="addressCell" jdbcType="VARCHAR" />
+        <result column="ORDER_CODE" property="orderCode" jdbcType="VARCHAR" />
+        <result column="ACTIVITY_CODE" property="activityCode" jdbcType="VARCHAR" />
+        <result column="ACTIVITY_DESCRIPTION" property="activityDescription" jdbcType="VARCHAR" />
+        <result column="EXPECT_MEASURE_DATE" property="expectMeasureDate" jdbcType="TIMESTAMP" />
+        <result column="EXPECT_INSTALL_DATE" property="expectInstallDate" jdbcType="TIMESTAMP" />
+        <result column="HOUSE_TYPE_CODE" property="houseTypeCode" jdbcType="VARCHAR" />
+        <result column="DECORATION_STYLE_CODE" property="decorationStyleCode" jdbcType="VARCHAR" />
+        <result column="DECORATION_PROGRESS_CODE" property="decorationProgressCode" jdbcType="VARCHAR" />
+        <result column="JOB" property="job" jdbcType="VARCHAR" />
+        <result column="AGE" property="age" jdbcType="VARCHAR" />
+        <result column="DECORATION_METHOD_CODE" property="decorationMethodCode" jdbcType="VARCHAR" />
+        <result column="BUDGET" property="budget" jdbcType="VARCHAR" />
+        <result column="ORDER_SIZE_CODE" property="orderSizeCode" jdbcType="VARCHAR" />
+        <result column="COSUME_ABLITY_CODE" property="cosumeAblityCode" jdbcType="VARCHAR" />
+        <result column="ORDER_PRIORITY_CODE" property="orderPriorityCode" jdbcType="VARCHAR" />
+        <result column="PERSUADE_LEVEL_CODE" property="persuadeLevelCode" jdbcType="VARCHAR" />
+        <result column="CREATE_CUS" property="createCus" jdbcType="TIMESTAMP" />
+        <result column="CURRENT_STATUS" property="currentStatus" jdbcType="VARCHAR" />
+        <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+        <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+        <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+        <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+        <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+        <result column="CHARGE_BACK_TIME" property="chargeBackTime" jdbcType="TIMESTAMP" />
+        <result column="CHARGE_BACK_REASON" property="chargeBackReason" jdbcType="VARCHAR" />
+        <result column="CHARGE_BACK_COMMENT" property="chargeBackComment" jdbcType="VARCHAR" />
+        <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+        <result column="ACTIVITY_COMMENTS" property="activityComments" jdbcType="VARCHAR" />
+        <result column="ESHOP_INVALID_REASON" property="eshopInvalidReason" jdbcType="VARCHAR" />
+        <result column="ESHOP_INVALID_COMMENT" property="eshopInvalidComment" jdbcType="VARCHAR" />
+        <result column="REVOKE_ORG_COMMENT" property="revokeOrgComment" jdbcType="VARCHAR" />
+        <result column="SECOND_SOURCE" property="secondSource" jdbcType="VARCHAR" />
+        <result column="TWO_SOURCE" property="twoSource" jdbcType="VARCHAR" />
+        <result column="LATENT_DEMAND" property="latentDemand" jdbcType="VARCHAR" />
+        <result column="TBORDER_ID" property="tborderId" jdbcType="VARCHAR" />
+        <result column="REFUND_STATUS" property="refundStatus" jdbcType="VARCHAR" />
+        <result column="DEALER_ID" property="dealerId" jdbcType="VARCHAR" />
+        <result column="ACCEPT_DATE" property="acceptDate" jdbcType="DATE" />
+        <result column="CUSTOMER_FEATURE" property="customerFeature" jdbcType="VARCHAR" />
+        <result column="COLUMN_SALE" property="columnSale" jdbcType="VARCHAR" />
+        <result column="COLUMN_DESIGN" property="columnDesign" jdbcType="VARCHAR" />
+        <result column="DECORATION_STATUS" property="decorationStatus" jdbcType="VARCHAR" />
+        <result column="DEPOSIT_FLAG" property="depositFlag" jdbcType="VARCHAR" />
+        <result column="SYS_GEN_ORDNUM" property="sysGenOrdnum" jdbcType="VARCHAR" />
+        <result column="ACTUAL_AMOUNT" property="actualAmount" jdbcType="DECIMAL" />
+        <result column="PAID_AMOUNT" property="paidAmount" jdbcType="DECIMAL" />
+        <result column="DEVELOPER" property="developer" jdbcType="VARCHAR" />
+        <result column="MEASURED" property="measured" jdbcType="TIMESTAMP" />
+        <result column="MEASURE" property="measure" jdbcType="TIMESTAMP" />
+        <result column="DRAWED" property="drawed" jdbcType="TIMESTAMP" />
+        <result column="DRAW" property="draw" jdbcType="TIMESTAMP" />
+        <result column="CHANNEL_ID" property="channelId" jdbcType="VARCHAR" />
+        <result column="KEY_WORDS" property="keyWords" jdbcType="VARCHAR" />
+        <result column="CREATE_ORDER" property="createOrder" jdbcType="TIMESTAMP" />
+        <result column="CREATE_ORDERED" property="createOrdered" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_DRAW" property="commitDraw" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_DRAWED" property="commitDrawed" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_ORDER" property="commitOrder" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_ORDERED" property="commitOrdered" jdbcType="TIMESTAMP" />
+        <result column="CHECK_DRAW" property="checkDraw" jdbcType="TIMESTAMP" />
+        <result column="CHECK_DRAWED" property="checkDrawed" jdbcType="TIMESTAMP" />
+        <result column="ISSUE_ORDER_DATE" property="issueOrderDate" jdbcType="TIMESTAMP" />
+        <result column="IS_FORMAL" property="isFormal" jdbcType="VARCHAR" />
+        <result column="RE_DRAW" property="reDraw" jdbcType="TIMESTAMP" />
+        <result column="IS_GATHERING" property="isGathering" jdbcType="VARCHAR" />
+        <result column="INFO_SOURCE" property="infoSource" jdbcType="VARCHAR" />
+    </resultMap>
+    <resultMap id="BaseResultMapTool" type="Map">
+        <!--
+          WARNING - @mbggenerated
+        -->
+        <id column="OPPORTUNITY_ID" jdbcType="VARCHAR" property="opportunityId" />
+        <result column="CURRENT_STATUS" property="currentStatus" jdbcType="VARCHAR" />
+        <result column="CUSTOMER_ID" property="customerId" jdbcType="VARCHAR" />
+        <result column="GUIDE_ID" property="guideId" jdbcType="VARCHAR" />
+        <result column="DESIGNER_ID" property="designerId" jdbcType="VARCHAR" />
+        <result column="SOURCE" property="source" jdbcType="VARCHAR" />
+        <result column="PHONE2" property="phone2" jdbcType="VARCHAR" />
+        <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+        <result column="CONNECT_NAME" property="connectName" jdbcType="VARCHAR" />
+        <result column="CONNECT_SEX" property="connectSex" jdbcType="CHAR" />
+        <result column="CONNECT_COMMENT" property="connectComment" jdbcType="VARCHAR" />
+        <result column="CONNECT_PHONE" property="connectPhone" jdbcType="VARCHAR" />
+        <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+        <result column="ADDRESS_CITY" property="addressCity" jdbcType="VARCHAR" />
+        <result column="ADDRESS_COUNTY" property="addressCounty" jdbcType="VARCHAR" />
+        <result column="ADDRESS_DETAIL" property="addressDetail" jdbcType="VARCHAR" />
+        <result column="ADDRESS_CELL" property="addressCell" jdbcType="VARCHAR" />
+        <result column="ORDER_CODE" property="orderCode" jdbcType="VARCHAR" />
+        <result column="ACTIVITY_CODE" property="activityCode" jdbcType="VARCHAR" />
+        <result column="ACTIVITY_DESCRIPTION" property="activityDescription" jdbcType="VARCHAR" />
+        <result column="EXPECT_MEASURE_DATE" property="expectMeasureDate" jdbcType="TIMESTAMP" />
+        <result column="EXPECT_INSTALL_DATE" property="expectInstallDate" jdbcType="TIMESTAMP" />
+        <result column="HOUSE_TYPE_CODE" property="houseTypeCode" jdbcType="VARCHAR" />
+        <result column="DECORATION_STYLE_CODE" property="decorationStyleCode" jdbcType="VARCHAR" />
+        <result column="DECORATION_PROGRESS_CODE" property="decorationProgressCode" jdbcType="VARCHAR" />
+        <result column="JOB" property="job" jdbcType="VARCHAR" />
+        <result column="AGE" property="age" jdbcType="VARCHAR" />
+        <result column="DECORATION_METHOD_CODE" property="decorationMethodCode" jdbcType="VARCHAR" />
+        <result column="BUDGET" property="budget" jdbcType="VARCHAR" />
+        <result column="ORDER_SIZE_CODE" property="orderSizeCode" jdbcType="VARCHAR" />
+        <result column="COSUME_ABLITY_CODE" property="cosumeAblityCode" jdbcType="VARCHAR" />
+        <result column="ORDER_PRIORITY_CODE" property="orderPriorityCode" jdbcType="VARCHAR" />
+        <result column="PERSUADE_LEVEL_CODE" property="persuadeLevelCode" jdbcType="VARCHAR" />
+        <result column="CREATE_CUS" property="createCus" jdbcType="TIMESTAMP" />
+        <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+        <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+        <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+        <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+        <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+        <result column="CHARGE_BACK_TIME" property="chargeBackTime" jdbcType="TIMESTAMP" />
+        <result column="CHARGE_BACK_REASON" property="chargeBackReason" jdbcType="VARCHAR" />
+        <result column="CHARGE_BACK_COMMENT" property="chargeBackComment" jdbcType="VARCHAR" />
+        <result column="COMMENTS" property="comments" jdbcType="VARCHAR" />
+        <result column="ACTIVITY_COMMENTS" property="activityComments" jdbcType="VARCHAR" />
+        <result column="ESHOP_INVALID_REASON" property="eshopInvalidReason" jdbcType="VARCHAR" />
+        <result column="ESHOP_INVALID_COMMENT" property="eshopInvalidComment" jdbcType="VARCHAR" />
+        <result column="REVOKE_ORG_COMMENT" property="revokeOrgComment" jdbcType="VARCHAR" />
+        <result column="SECOND_SOURCE" property="secondSource" jdbcType="VARCHAR" />
+        <result column="TWO_SOURCE" property="twoSource" jdbcType="VARCHAR" />
+        <result column="LATENT_DEMAND" property="latentDemand" jdbcType="VARCHAR" />
+        <result column="TBORDER_ID" property="tborderId" jdbcType="VARCHAR" />
+        <result column="REFUND_STATUS" property="refundStatus" jdbcType="VARCHAR" />
+        <result column="DEALER_ID" property="dealerId" jdbcType="VARCHAR" />
+        <result column="ACCEPT_DATE" property="acceptDate" jdbcType="DATE" />
+        <result column="CUSTOMER_FEATURE" property="customerFeature" jdbcType="VARCHAR" />
+        <result column="COLUMN_SALE" property="columnSale" jdbcType="VARCHAR" />
+        <result column="COLUMN_DESIGN" property="columnDesign" jdbcType="VARCHAR" />
+        <result column="DECORATION_STATUS" property="decorationStatus" jdbcType="VARCHAR" />
+        <result column="DEPOSIT_FLAG" property="depositFlag" jdbcType="VARCHAR" />
+        <result column="SYS_GEN_ORDNUM" property="sysGenOrdnum" jdbcType="VARCHAR" />
+        <result column="ACTUAL_AMOUNT" property="actualAmount" jdbcType="DECIMAL" />
+        <result column="PAID_AMOUNT" property="paidAmount" jdbcType="DECIMAL" />
+        <result column="DEVELOPER" property="developer" jdbcType="VARCHAR" />
+        <result column="MEASURED" property="measured" jdbcType="TIMESTAMP" />
+        <result column="MEASURE" property="measure" jdbcType="TIMESTAMP" />
+        <result column="DRAWED" property="drawed" jdbcType="TIMESTAMP" />
+        <result column="DRAW" property="draw" jdbcType="TIMESTAMP" />
+        <result column="CHANNEL_ID" property="channelId" jdbcType="VARCHAR" />
+        <result column="KEY_WORDS" property="keyWords" jdbcType="VARCHAR" />
+        <result column="CREATE_ORDER" property="createOrder" jdbcType="TIMESTAMP" />
+        <result column="CREATE_ORDERED" property="createOrdered" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_DRAW" property="commitDraw" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_DRAWED" property="commitDrawed" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_ORDER" property="commitOrder" jdbcType="TIMESTAMP" />
+        <result column="COMMIT_ORDERED" property="commitOrdered" jdbcType="TIMESTAMP" />
+        <result column="CHECK_DRAW" property="checkDraw" jdbcType="TIMESTAMP" />
+        <result column="CHECK_DRAWED" property="checkDrawed" jdbcType="TIMESTAMP" />
+        <result column="ISSUE_ORDER_DATE" property="issueOrderDate" jdbcType="TIMESTAMP" />
+        <result column="IS_FORMAL" property="isFormal" jdbcType="VARCHAR" />
+        <result column="RE_DRAW" property="reDraw" jdbcType="TIMESTAMP" />
+        <result column="IS_GATHERING" property="isGathering" jdbcType="VARCHAR" />
+        <result column="INFO_SOURCE" property="infoSource" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="selectUserRequire" resultType="Map">
+    select GUIDE_ID guideId,
+            CONNECT_PHONE connectPhone
+            from rl_potential_opportunities
+            where OPPORTUNITY_ID=#{arg0}
+            AND CUSTOMER_ID=#{arg1}
+  </select>
+    <select id="selectPotentialRequire" resultMap="BaseResultMapTool" parameterType="String">
+        <![CDATA[
+                SELECT
+            tab1.*, sum(p.amount) amount
+        FROM
+            (
+                SELECT
+                    o.OPPORTUNITY_ID,
+                    o.CURRENT_STATUS,
+                    o.EXPECT_MEASURE_DATE,
+                    o.ADDRESS_DETAIL,
+                    o.ADDRESS_CELL,
+                    o.ADDRESS_CITY,
+                    o.ADDRESS_COUNTY,
+                    o.CONNECT_COMMENT,
+                    u.USER_NAME userName,
+                    o.DRAW,
+                    o.BUDGET,
+                    COUNT(r.`REQUIREMENT_ID`) count
+                FROM
+                    rl_potential_opportunities o
+                LEFT JOIN cap_user u ON o.DESIGNER_ID = u.USER_ID
+                LEFT JOIN rl_potential_requirements r ON r.OPPORTUNITY_ID = o.OPPORTUNITY_ID
+                WHERE
+                    o.CUSTOMER_ID = #{customerId}
+                AND o.IS_FORMAL = 'N'
+                GROUP BY
+                    o.OPPORTUNITY_ID
+            ) tab1
+        LEFT JOIN rl_payment p ON tab1.OPPORTUNITY_ID = p.OPTY_ID
+        AND p. STATUS = '有效'
+        GROUP BY
+            tab1.OPPORTUNITY_ID
+        ]]>
+  </select>
+    <select id="selectPotentialOrder" resultMap="BaseResultMapTool" parameterType="String">
+        <![CDATA[
+                      SELECT
+            tab1.*, sum(p.amount) amount
+        FROM
+            (
+                SELECT
+                    o.OPPORTUNITY_ID,
+                    o.CURRENT_STATUS,
+                    o.EXPECT_MEASURE_DATE,
+                    o.ADDRESS_DETAIL,
+                    o.ADDRESS_CELL,
+                    o.ADDRESS_CITY,
+                    o.ADDRESS_COUNTY,
+                    o.CONNECT_COMMENT,
+                    o.CREATION_DATE,
+                    u.USER_NAME userName,
+                    o.DRAW draw,
+                    o.EMAIL,
+                    o.HOUSE_TYPE_CODE,
+                    o.DECORATION_PROGRESS_CODE,
+                    o.DECORATION_STYLE_CODE,
+                    o.DEVELOPER,
+                    o.DECORATION_METHOD_CODE,
+                    COUNT(r.`REQUIREMENT_ID`) count,
+                    o.BUDGET,
+                    d.ORG_NAME shop,
+                    d.ADDRESS shopAddress,
+                    ug.REAL_NAME shopGuide,
+                    ug.USER_NAME shopGuidePhone,
+                    u.REAL_NAME designer,
+                    u.USER_NAME designerPhone,
+                    oc.CREATION_DATE orderDate,
+                    o.SYS_GEN_ORDNUM orderCode
+                FROM
+                    rl_potential_opportunities o
+                LEFT JOIN cap_user u ON o.DESIGNER_ID = u.USER_ID
+                LEFT JOIN cap_user ug ON o.GUIDE_ID = ug.USER_ID
+                LEFT JOIN rl_potential_requirements r ON r.OPPORTUNITY_ID = o.OPPORTUNITY_ID
+                LEFT JOIN rl_dealer_org d ON o.ORG_ID = d.ORG_ID
+                LEFT JOIN rl_opportunity_comments oc ON  oc.OPPORTUNITY_ID = o.OPPORTUNITY_ID AND oc.CURRENT_STATUS='CHECK_DRAW'
+                LEFT JOIN eos_dict_entry dict ON o.CURRENT_STATUS=dict.DICTID
+                WHERE
+                    o.CUSTOMER_ID = #{customer} AND o.IS_FORMAL = 'N'  AND dict.SORTNO>5
+                GROUP BY
+                    o.OPPORTUNITY_ID
+            ) tab1
+        LEFT JOIN rl_payment p ON tab1.OPPORTUNITY_ID = p.OPTY_ID
+        AND p. STATUS = '有效'
+        GROUP BY
+            tab1.OPPORTUNITY_ID
+        ]]>
+    </select>
+    <select id="selectPotentialRequireById" resultMap="BaseResultMapTool">
+                SELECT
+            tab1.*, sum(p.amount) amount
+        FROM
+            (
+                SELECT
+                    o.OPPORTUNITY_ID,
+                    o.CURRENT_STATUS,
+                    o.EXPECT_MEASURE_DATE,
+                    o.ADDRESS_DETAIL,
+                    o.ADDRESS_CELL,
+                    o.ADDRESS_CITY,
+                    o.ADDRESS_COUNTY,
+                    o.CONNECT_COMMENT,
+                    o.CREATION_DATE,
+                    o.MEASURED,
+                    u.USER_NAME userName,
+                    o.DRAW draw,
+                    o.EMAIL,
+                    o.HOUSE_TYPE_CODE,
+                    o.DECORATION_PROGRESS_CODE,
+                    o.DECORATION_STYLE_CODE,
+                    o.DEVELOPER,
+                    o.DECORATION_METHOD_CODE,
+                    COUNT(r.`REQUIREMENT_ID`) count,
+                    o.BUDGET,
+                    d.ORG_NAME shop,
+                    d.ADDRESS shopAddress,
+                    IFNULL(concat(ug.REAL_NAME ,'  ',ug.USER_NAME),'未分配')  shopGuide,
+                    IFNULL(concat(u.REAL_NAME,'  ',u.USER_NAME),'未分配') designer
+                FROM
+                    rl_potential_opportunities o
+                LEFT JOIN cap_user u ON o.DESIGNER_ID = u.USER_ID
+                LEFT JOIN cap_user ug ON o.GUIDE_ID = ug.USER_ID
+                LEFT JOIN rl_potential_requirements r ON r.OPPORTUNITY_ID = o.OPPORTUNITY_ID
+                LEFT JOIN rl_dealer_org d ON o.ORG_ID = d.ORG_ID
+                WHERE
+                     o.CUSTOMER_ID = #{customerId} AND o.OPPORTUNITY_ID=#{opportunityId}
+                GROUP BY
+                    o.OPPORTUNITY_ID
+            ) tab1
+        LEFT JOIN rl_payment p ON tab1.OPPORTUNITY_ID = p.OPTY_ID
+        GROUP BY
+            tab1.OPPORTUNITY_ID
+    </select>
+    <select id="selectPrice"  resultType="java.util.LinkedHashMap" parameterType="String">
+               SELECT
+            a.ACTIVITY_NAME activity,
+            o.ACTUAL_AMOUNT finalPrice
+        FROM
+            rl_potential_opportunities o
+        LEFT JOIN rl_activity a ON o.ACTIVITY_CODE = a.ACTIVITY_ID
+        WHERE
+            o.OPPORTUNITY_ID =  #{opportunityId}
+    </select>
+    <select id="selectOrderCodeAndDate" resultType="Map" parameterType="String">
+        SELECT
+        o.SYS_GEN_ORDNUM orderCode,
+        oc.CREATION_DATE submitOrder
+        FROM
+        rl_potential_opportunities o
+        LEFT JOIN rl_opportunity_comments oc ON o.OPPORTUNITY_ID = oc.OPPORTUNITY_ID
+        LEFT JOIN eos_dict_entry dict ON oc.CURRENT_STATUS = dict.DICTID
+        AND dict.DICTTYPEID = 'ORDER_STATUS'
+        WHERE
+        o.OPPORTUNITY_ID = #{opportunityId}
+        AND dict.SORTNO = 6
+    </select>
+    <select id="selectPicCountByOptId" resultType="String" parameterType="String">
+        SELECT
+            COUNT(a.FILE_PATH)
+        FROM
+            rl_potential_opportunities opp
+        LEFT JOIN rl_order ord ON opp.OPPORTUNITY_ID = ord.OPTY_ID
+        LEFT JOIN rl_dms_attachment a ON ord.ORDER_ID = a.RES_ID
+        WHERE
+            opp.OPPORTUNITY_ID = #{opportunityId}
+            </select>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlDmsUserMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlDmsUser" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="USER_ID" property="userId" jdbcType="VARCHAR" />
+    <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="BROKER_ID" property="brokerId" jdbcType="VARCHAR" />
+    <result column="USER_NAME" property="userName" jdbcType="VARCHAR" />
+    <result column="ORG_NAME" property="orgName" jdbcType="VARCHAR" />
+    <result column="USER_SEX" property="userSex" jdbcType="CHAR" />
+    <result column="USER_PHONE" property="userPhone" jdbcType="VARCHAR" />
+    <result column="USER_ADDRESS" property="userAddress" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

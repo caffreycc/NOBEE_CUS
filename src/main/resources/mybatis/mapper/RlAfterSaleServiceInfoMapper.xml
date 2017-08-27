@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlAfterSaleServiceInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlAfterSaleServiceInfo" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="ASS_ID" property="assId" jdbcType="VARCHAR" />
+    <result column="ORDER_ID" property="orderId" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_NAME" property="customerName" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_TEL" property="customerTel" jdbcType="VARCHAR" />
+    <result column="CUSTOMER_ADDRESS" property="customerAddress" jdbcType="VARCHAR" />
+    <result column="DEALER_ID" property="dealerId" jdbcType="VARCHAR" />
+    <result column="IS_CUS_START" property="isCusStart" jdbcType="VARCHAR" />
+    <result column="IS_NEEN_REPAIR" property="isNeenRepair" jdbcType="VARCHAR" />
+    <result column="PROCESS_TIME" property="processTime" jdbcType="TIMESTAMP" />
+    <result column="PROCESS_DEPARTMENT_NAME" property="processDepartmentName" jdbcType="VARCHAR" />
+    <result column="LABORCOST" property="laborcost" jdbcType="DOUBLE" />
+    <result column="IS_SOLVE" property="isSolve" jdbcType="VARCHAR" />
+    <result column="CREATE_BY" property="createBy" jdbcType="VARCHAR" />
+    <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="EXPECT_TIME" property="expectTime" jdbcType="DATE" />
+    <result column="FINISH_BY" property="finishBy" jdbcType="VARCHAR" />
+    <result column="FINISH_DATE" property="finishDate" jdbcType="TIMESTAMP" />
+    <result column="PROBLEM_DESCRIBE" property="problemDescribe" jdbcType="LONGVARCHAR" />
+    <result column="PROCESS_METHOD" property="processMethod" jdbcType="LONGVARCHAR" />
+    <result column="LIABLE_DESCRIBE" property="liableDescribe" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <select id="getSHOrderNum" resultType="String" parameterType="String">
+    SELECT
+    fn_getSHOrderNum (
+    'WEIXIN'
+    )
+  </select>
+  <select id="selectUrlById" resultType="Map" parameterType="String">
+    SELECT
+    a.FILE_PATH url
+    FROM
+    rl_after_sale_service_info s
+    LEFT JOIN sys_attachment a ON s.ASS_ID = a.RESOURCE_ID
+    WHERE
+    s.ID = #{id}
+  </select>
+
+</mapper>

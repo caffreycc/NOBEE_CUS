@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ricelink.weixin.mapper.mapper.RlCustomersMapper" >
+  <resultMap id="BaseResultMap" type="com.ricelink.weixin.mapper.model.RlCustomers" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="CUSTOMER_ID" property="customerId" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SEX" property="sex" jdbcType="VARCHAR" />
+    <result column="PHONE1" property="phone1" jdbcType="VARCHAR" />
+    <result column="CREATED_BY" property="createdBy" jdbcType="VARCHAR" />
+    <result column="CREATION_DATE" property="creationDate" jdbcType="TIMESTAMP" />
+    <result column="LAST_UPDATED_BY" property="lastUpdatedBy" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATE_DATE" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="VERSION_NUMBER" property="versionNumber" jdbcType="BIGINT" />
+    <result column="RECORD_STATUS" property="recordStatus" jdbcType="VARCHAR" />
+    <result column="CLIENT_UPDATE_DATE" property="clientUpdateDate" jdbcType="TIMESTAMP" />
+    <result column="WX_OPENID" property="wxOpenid" jdbcType="VARCHAR" />
+    <result column="INFO_SOURCE" property="infoSource" jdbcType="VARCHAR" />
+    <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
+    <result column="GUIDE_ID" property="guideId" jdbcType="VARCHAR" />
+    <result column="DEALER" property="dealer" jdbcType="VARCHAR" />
+    <result column="ANNUAL_INCOME" property="annualIncome" jdbcType="VARCHAR" />
+    <result column="EDUCATION_TYPE" property="educationType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

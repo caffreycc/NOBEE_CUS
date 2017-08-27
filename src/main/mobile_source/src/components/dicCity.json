@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "message": "success",
+    "data": [
+        {
+            "id": "C001",
+            "text": "北京市",
+            "father": "P004"
+        },
+        {
+            "id": "C002",
+            "text": "天津市",
+            "father": "P007"
+        },
+        {
+            "id": "C003",
+            "text": "石家庄市",
+            "father": "P017"
+        }
+    ]
+}
